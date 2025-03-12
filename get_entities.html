@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 
   <p><code>ecs.get_component&lt;TransformComponent&gt;(ecs.getEntity(0))-&gt;position = { 0.0f, 10.0f, 0.0f };</code></p>
 
-  <p><code> ecs.get_component<TransformComponent>(ecs.getEntity(0))->rotation = glm::vec3(0.0f, (float)time, 0.0f); </code></p>
+  <p><code> ecs.get_component&lt;TransformComponent&gt;(ecs.getEntity(0))->rotation = glm::vec3(0.0f, (float)time, 0.0f); </code></p>
   <p>
     This allows already created entities to be modified by code. The <code>getEntity</code> function retrieves an entity by its ID. 
     The ID is shown in the Identifier component.
