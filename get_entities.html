@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('index.html','');});
     You can retrieve entities created in the engine by calling the following method from the <code>ecs</code> class:
   </p>
 
-  <p><code> "ecs.get_component<TransformComponent>(ecs.getEntity(0))->rotation = { 0.0f, time, 0.0f, 0.0f };</code></p>
+  <p><code> ecs.get_component<TransformComponent>(ecs.getEntity(0))->rotation = { 0.0f, time, 0.0f, 0.0f };</code></p>
 
   <p>
     This allows already created entities to be modified by code. The <code>getEntity</code> function retrieves an entity by its ID. 
