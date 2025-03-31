@@ -92,42 +92,12 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="contents">
 
   <p>- To use the engine just execute t33_launcher.cc example.</p>
-  <p>- If you want to render anything in the scene you first need to add a light.</p>
+  <p>- We attached another example that uses the ECS as an example but it doesnt compile because of other things.</p>
+  <p>- If you want to render anything in the scene you first need to add a camera</p>
   <p>- The point light doesn't work in this version, so don't use it or it will crash.</p>
   <p>- Toggle fullscreen F11</p>
+  <p>- You can edit the transformation of entities by code in the t33_launcher.cc example or by lua in the scripting component, We attached a file as an example in stages/scripts/transform_example.lua (You need first to add the Scripting component)</p>
 
-  <p>- Basic window creation:</p>
-
-  <pre><code>
-#include "Core/window.h"
-#include "Core/Input.h"
-
-#include <../deps/glm/glm.hpp>
-#include <optional>
-#include <string>
-
-int main(int, char**) {
-
-    auto window = Window::make(800, 600, "Window");
-    window->setWindowActive();
-    //window->initGLEW();
-
-    Input input { window->getWindow() };
-
-    double lastTime = window->getTime();
-    bool done = false;
-    while (!done) {
-        double currentTime = window->getTime();
-        float dt = float(currentTime - lastTime);
-
-        window->updateWindow();
-
-        if (window->closePressed(input)) done = true;
-    }
-
-    return 0;
-}
-  </code></pre>
 
 </div><!-- contents -->
 
